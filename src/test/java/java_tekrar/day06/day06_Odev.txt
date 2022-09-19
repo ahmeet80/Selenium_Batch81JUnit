@@ -1,0 +1,7 @@
+
+Odev day06
+
+// 1.Bir Class olusturalimYanlisEmailTesti
+// 2.http://automationpractice.com/index.php sayfasinagidelim
+// 3.Sign in butonunabasalim
+// 4.Email kutusuna @isareti olmayan bir mail yazipenter'a

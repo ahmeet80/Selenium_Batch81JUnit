@@ -1,0 +1,29 @@
+
+
+bir web sitesine girdigimizde karsımıza bir uyarı mesajı yada bir buttona tıkladığımızda bir uyarı cıkabilir
+eğer bu uyarıya incele(mause sağ-tik inspect) yapabiliyorsak bu tür alert lere html alert denir.
+ve istedigimiz locate'i alabiliriz. Ama gelen uyarı kutusuna müdahale (sağ tik inspect ile) edemiyorsak
+bu tür alertlere  js alert denir.
+js alert'lere müdahale edebilmek icin
+
+-- tamam ya da ok icin
+driver.switchTo().alert().accept();
+
+--iptal icin
+driver.switchTo().alert().dismiss();
+
+--alert icindeki mesajı almak icin
+driver.switchTo().alert().getText();
+
+--alert bizden bir metin istiyorsa
+driver.switchTo().alert().sendKeys("");
+
+methodları kullanilir!!
+
+
+Iframenedir?
+➢IFrame,bir web sayfasına icine yerlestirilmis baska bir web sayfasıdır veya bir HTML dokumaninin için eyerleştirilmiş
+baska bir HTML dokumanidir.
+➢IFrame genellikle bir Websayfasına dokuman,video veya interaktif media gibi başka bir kaynaktan içerik eklemek için
+kullanılır. <iframe>tag’ı bir inline framebelirtir.
+https://html.com/tags/iframe/
