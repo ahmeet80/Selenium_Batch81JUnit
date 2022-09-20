@@ -40,8 +40,8 @@ public class C01_Allerts {
         //- https://the-internet.herokuapp.com/javascript_alerts adresini gidelim
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         //- click for JS Alert butonuna tıklayalım
-        driver.findElement(By.xpath("//*[text()='Click for JS Alert']"));
-        //- Tıkladiktan sonra cşkan uyari mesajina (alerte) tamam diyelim
+        driver.findElement(By.xpath("//*[text()='Click for JS Alert']")).click();
+        //- Tıkladiktan sonra cikan uyari mesajina (alerte) tamam diyelim
         Thread.sleep(3000);
         driver.switchTo().alert().accept(); // switchTo() ile locatesiz islem yapiyoruz
     }

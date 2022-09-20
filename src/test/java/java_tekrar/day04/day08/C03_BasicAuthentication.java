@@ -1,4 +1,4 @@
-package java_tekrar.day08;
+package java_tekrar.day04.day08;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;

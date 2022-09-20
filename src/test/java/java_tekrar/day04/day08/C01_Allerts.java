@@ -1,11 +1,10 @@
-package java_tekrar.day08;
+package java_tekrar.day04.day08;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -37,12 +36,13 @@ public class C01_Allerts {
     @Test
     public void test1() throws InterruptedException {
         //- https://the-internet.herokuapp.com/javascript_alerts adresini gidelim
-       driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+        driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         //- click for JS Alert butonuna tıklayalım
-        WebElement jsAlertButton = driver.findElement(By.xpath("//*[text()='Click for JS Alert']"));
-        jsAlertButton.click();
+        driver.findElement(By.xpath("//*[@onclick=\"jsAlert()\"]")).click();
         //- Tıkladiktan sonra cikan uyari mesajina (alerte) tamam diyelim
-        driver.switchTo().alert().accept(); // switchTo() ile locatesiz islem yapiyoruz
+        Thread.sleep(2000);
+        driver.switchTo().alert().accept();
+
 
 
 

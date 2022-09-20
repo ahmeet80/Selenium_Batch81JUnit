@@ -1,4 +1,4 @@
-package java_tekrar.day08;
+package java_tekrar.day04.day08;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -15,24 +15,24 @@ import java.time.Duration;
 public class C02_Allerts {
     /*
    Bir web sitesine girdigimizde karsımıza bir uyarı mesajı yada bir buttona tıkladığımızda bir uyarı cıkabilir
-eğer bu uyarıya incele(mause sağ-tik inspect) yapabiliyorsak bu tür alert lere html alert denir.
-ve istedigimiz locate'i alabiliriz. Ama gelen uyarı kutusuna müdahale (sağ tik inspect ile) edemiyorsak
-bu tür alertlere  (java script)js alert denir.
-js alert'lere müdahale edebilmek icin
+    eğer bu uyarıya incele(mause sağ-tik inspect) yapabiliyorsak bu tür alert lere html alert denir.
+    ve istedigimiz locate'i alabiliriz. Ama gelen uyarı kutusuna müdahale (sağ tik inspect ile) edemiyorsak
+    bu tür alertlere  js alert denir.
+    js alert'lere müdahale edebilmek icin
 
--- tamam ya da ok icin
-driver.switchTo().alert().accept();
+    -- tamam ya da ok icin
+    driver.switchTo().alert().accept();
 
---iptal icin
-driver.switchTo().alert().dismiss();
+    --iptal icin
+    driver.switchTo().alert().dismiss();
 
---alert icindeki mesajı almak icin
-driver.switchTo().alert().getText();
+    --alert icindeki mesajı almak icin
+    driver.switchTo().alert().getText();
 
---alert bizden bir metin istiyorsa
-driver.switchTo().alert().sendKeys("");
+    --alert bizden bir metin istiyorsa
+    driver.switchTo().alert().sendKeys("");
 
-methodları kullanilir!!
+    methodları kullanilir!!
      */
 
     //Bir class olusturun: Alerts
@@ -69,11 +69,18 @@ methodları kullanilir!!
 
         //1. butona tıklayın, uyarıdaki OK butonuna tıklayın ve result mesajının
             // “You successfully clicked an alert” oldugunu test edin.
-
+        driver.findElement(By.xpath("//*[text()='Click for JS Alert']")).click();
+        Thread.sleep(2000);
+        driver.switchTo().alert().accept();
+        WebElement mesaj = driver.findElement(By.xpath("//*[@id='result']"));
+        String actualMessage = mesaj.getText();
+        String expectedMessage = "You successfully clicked an alert";
+            Assert.assertEquals(actualMessage,expectedMessage);
 
     }
 
     @Test
+    //Bir metod olusturun: dismissAlert
     public void test2() throws InterruptedException {
         //2. butona tıklayın, uyarıdaki Cancel butonuna tıklayın ve
         // result mesajını “successfuly” icermedigini test edin.
@@ -104,11 +111,11 @@ methodları kullanilir!!
         // Allert uzerindeki mesaji yazdirin
         Thread.sleep(2000);
         System.out.println("3. Butonun Allert Mesaji =  " + driver.switchTo().alert().getText());
-        driver.switchTo().alert().sendKeys("Ahmet");
+        driver.switchTo().alert().sendKeys("Ahmet K");
         Thread.sleep(2000);
         driver.switchTo().alert().accept();
         String actualMesaj = driver.findElement(By.xpath("//*[@id='result']")).getText();
-        String expectedMesaj = "Erol Evren";
+        String expectedMesaj = "Ahmet K";
         Assert.assertTrue(actualMesaj.contains(expectedMesaj));
 
 
