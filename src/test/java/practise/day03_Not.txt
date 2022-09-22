@@ -1,0 +1,5 @@
+
+asserttrue --> dogruysa  onayla geç,      yanlişsa çalışma dur, hata ver, notumu goster.
+assertFalse --> yanlışsa onayla geç,     doğruysa çalışma dur, hata ver, notumu goster
+assertEquals --> eşitse onayla gec,    eşit değilse çalışma dur, hata ver, notumu goster
+assertNotEquals --> eşit değilse onayla geç,     eşitse çalışma dur, hata ver, notumu goster.
