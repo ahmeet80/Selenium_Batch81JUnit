@@ -14,7 +14,7 @@
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->  <!-- selenium java icin -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -28,7 +28,7 @@
             <version>5.1.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/junit/junit --> <!-- Junit Framework icin -->
+        <!-- https://mvnrepository.com/artifact/junit/junit -->  <!-- Junit Framework icin -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -43,8 +43,19 @@
             <version>1.0.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->  <!-- excel uzerinde otomasyon yapabilmek icin -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.2</version>
+        </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --> <!--excel uzerinde otomasyon yapabilmek icin-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.2</version>
+        </dependency>
 
 
     </dependencies>

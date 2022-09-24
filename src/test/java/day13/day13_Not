@@ -1,0 +1,6 @@
+
+Tablo ile alakalı (Web tables)
+
+incele dedigimizde table tagının altında thead olur yani baslık,
+bunun altındakilerde artık th baslığın birinci satırını veriyor.
+td lerde baslığın hücrelerini sutunlarını veriyor.  tr den sonraki th baslığın ikinci satirını veriyor
